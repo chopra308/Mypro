@@ -5,17 +5,17 @@
 <struts-config>
 
 	<form-beans>
-		<form-bean name="RF" type="beans.formBackup"/>
+		<form-bean name="Emp" type="beans.formBackup"/>
 	</form-beans>
 	
 	  <global-forwards>
   	</global-forwards>
 	
 	<action-mappings>
-<action path="/hello" name="RF" input="/index.jsp"   type="beans.HelloController">
+<action path="/reg" name="Emp" validate="true" input="/index.jsp" >
 			<forward name="success" path="/success.jsp"/>
 		</action>
 	</action-mappings>
-	  
-	<message-resources parameter="beans/Message"/>
+	
+	<message-resources parameter="beans/Messages"/>
 </struts-config>
