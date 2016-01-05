@@ -1,0 +1,14 @@
+<!DOCTYPE struts PUBLIC  
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="controller" extends="struts-default">
+<action name="cal" class="controller.CalController">
+
+<exception-mapping exception="java.lang.ArithmeticException" result="exceptionpage"/>
+<result name="success">/success.jsp</result>
+<result name="exceptionpage">/exceptionpage.jsp </result> 
+
+</action>
+</package>
+</struts>
