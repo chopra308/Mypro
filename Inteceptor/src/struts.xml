@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+
+   <package name ="interceptors"  extends ="struts-default">
+		<interceptors>
+			<interceptor name="authInterceptor" class="interceptors.AuthInterceptor"/>
+		</interceptors>
+		
+		<action name ="login">
+			<result>/login.jsp</result>
+		</action>
+		<action name ="authentication" class ="interceptors.Authentication" method="loginCredentialsCheck">
+			<result name="success" type="chain">authorizedonly</result>
+			<result name="failure">/login.jsp</result>
+		</action>
+		<action name ="authorizedonly">
+			<interceptor-ref name="authInterceptor"/>
+				<result name="success">/authorizedpage.jsp</result>
+				<result name ="failure">/login.jsp</result>
+		</action>
+	</package>
+
+</struts>
