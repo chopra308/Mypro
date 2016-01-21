@@ -1,0 +1,24 @@
+<!DOCTYPE struts-config PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+ "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+ 
+ <struts-config>
+ 
+ <form-beans>
+ <form-bean name="RF" type="beans.AdharForm"/>
+ </form-beans>
+
+  
+ <action-mappings>
+ <action path="/reg" name="RF" >
+ 
+
+ </action>
+<action path="/changelang" type="beans.ChangeLanguageController">
+ 
+    <forward name="index" path="/index.jsp" />
+ </action>
+   </action-mappings>
+ <message-resources parameter="resources/AdharForm"></message-resources>
+
+ </struts-config>
