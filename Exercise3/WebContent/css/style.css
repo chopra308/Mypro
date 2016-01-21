@@ -1,0 +1,12 @@
+body {
+background-color: #f4f4f4;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 16px;
+line-height: 1.5em;
+}
+a { text-decoration: none; }
+h1 { font-size: 1em; }
+h1, p {
+margin-bottom: 10px;
+}
