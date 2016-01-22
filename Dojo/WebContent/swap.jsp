@@ -44,7 +44,7 @@ dojo.ready(function(){
 			},
 			duration: 800
 		
-		}).play();**/
+		}).play();
 		
 	});
 });

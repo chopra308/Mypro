@@ -7,7 +7,7 @@
 <head>
 <title></title>
 </head>
-<body>
-   This is my custom error page
+<body style="background-color:lightgrey;">
+   <h2 style="color:blue;">This is my custom error page</h2>
 </body>
 </html>

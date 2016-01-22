@@ -5,7 +5,7 @@
 
 <struts>
 
-
+<constant name="struts.mapper.action.prefix.enabled" value="true" />
 	<package name="controller" extends="struts-default" >
 
    		<action name="*cal" class="controller.CalController" method="{1}">

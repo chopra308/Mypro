@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="RagForm_VF">
+    <wb-module deploy-name="RagForm_VF(NA)">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="RagForm_VF"/>
-        <property name="java-output-path" value="/RagForm_VF/build/classes"/>
+        <property name="java-output-path" value="/RagForm_VF(NA)/build/classes"/>
+        <property name="context-root" value="RagForm_VF(NA)"/>
     </wb-module>
 </project-modules>
