@@ -9,13 +9,24 @@ import com.opensymphony.xwork2.ActionSupport;
 public class Validation extends ActionSupport {
 
 
-		public String Name,Email,Telephone,Subject,Comment;
+		public String user,Email,Telephone,pass,Subject,Comment;
 	
-		public String getName() {
-			return Name;
+	
+
+		public String getUser() {
+			return user;
 		}
-		public void setName(String name) {
-			Name = name;
+
+		public void setUser(String user) {
+			this.user = user;
+		}
+
+		public String getPass() {
+			return pass;
+		}
+
+		public void setPass(String pass) {
+			this.pass = pass;
 		}
 
 		public String getEmail() {
@@ -62,13 +73,15 @@ public class Validation extends ActionSupport {
 	            try {
 	                Statement st = con.createStatement();
 	                int value = st
-	                        .executeUpdate("INSERT INTO details(Name, Email,Telephone, Subject, Comment) "
+	                        .executeUpdate("INSERT INTO Register(user, Email,Telephone,pass,Subject, Comment) "
 	                                + "VALUES('"
-	                                + Name
+	                                + user
 	                                + "','"
 	                                + Email
 	                                + "','"
 	                                + Telephone
+	                                + "','"
+	                                + pass
 	                                + "','"
 	                                + Subject
 	                                + "','"

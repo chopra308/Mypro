@@ -4,9 +4,20 @@ color: #5a5656;
 font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 font-size: 16px;
 line-height: 1.5em;
+ background-image: url("http://ma-adultinfo.affinitysoccer.com/1011/css/redblue/background.jpg");
 }
 a { text-decoration: none; }
 h1 { font-size: 1em; }
 h1, p {
 margin-bottom: 10px;
+}
+#icon{
+
+	background: url("https://www.cogicicas.org/images/form.jpg");
+    background-size: 100%;
+	
+}
+
+#img{
+	background-size:25%;
 }
