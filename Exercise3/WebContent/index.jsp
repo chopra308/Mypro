@@ -28,7 +28,8 @@ name="ContactForm" onsubmit="return ValidateContactForm();">
             <option>Comment</option>
             <option>Consultation</option>
             <option>Other</option>
-        </select></p>
+        </select>
+        </p>
     <p>Comments:  <textarea cols="55" name="Comment">  </textarea></p>
     <p><input type="submit" value="Send" name="submit">
     <input type="reset" value="Reset" name="reset">

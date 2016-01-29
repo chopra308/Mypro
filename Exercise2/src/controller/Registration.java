@@ -70,12 +70,15 @@ public class Registration extends ActionSupport {
 	public String getName() {
 		return name;
 	}
+	
+	
 	@Override
 	public String execute() throws Exception {
 		System.out.println("jdbc connection");
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection(
                 "jdbc:mysql://localhost/employee", "root", "root");
+        System.out.println(firstName);
  
         try {
  
