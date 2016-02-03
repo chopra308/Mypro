@@ -58,6 +58,7 @@ public class validator extends ActionSupport {
 	 ArrayList<String> al=new ArrayList<String>();
 	 ArrayList<String> a1=new ArrayList<String>();
 	 ArrayList<String> b1=new ArrayList<String>();
+	 ArrayList<String> c1=new ArrayList<String>();
 	
 		try{
 			ResultSet rs=st.executeQuery("Select * from employees");
@@ -65,22 +66,34 @@ public class validator extends ActionSupport {
 			HttpSession hs=req.getSession();
 			
 		hs.setAttribute("id", EMPID);
-		/**
+		
 		ResultSetMetaData rsmd=rs.getMetaData();
 		int columnCount =rsmd.getColumnCount();
 		System.out.println(columnCount);
 		int rowcount=0;
+		String c0="hi";
+		c1.add(c0);
+		   HashMap<Integer, ArrayList<String>> map = 
+			        new HashMap<Integer, ArrayList<String>>();
+		   
+		   /**
+		 int j=0; 
+		   while (rs.next()) {
+	
+		for(int i=0; i<columnCount;i++){
 		
-		while (rs.next()) {
-		rowcount++;
-		for(int i=0;i<columnCount;i++){
 			   System.out.println("<TD>" + rs.getString(i+1) + "</TD>");
-			   c1.add(rs.getString(i+1));
-		}}
+			   c0+= rs.getString(i)+",";
+			  
+		}
+		j++;
+		c1.add(c0);
+		}
 		
+		System.out.println(rowcount);
 		
-		System.out.println(c1.toString());**/
-		
+		System.out.println(c1.toString());
+		hs.setAttribute("record",c1);**/
 			while(rs.next()){
 
 			String s1=rs.getString(3);
@@ -88,6 +101,8 @@ public class validator extends ActionSupport {
 			String s2=rs.getString(2);
 			a1.add(s);
 			b1.add(s2);
+			int r=rs.getRow();
+			System.out.println(r);
 			
 			hs.setAttribute("emp", a1);
 			hs.setAttribute("name", b1);
@@ -99,7 +114,7 @@ public class validator extends ActionSupport {
 			}
 			hs.setAttribute("MNG",al);
 			//System.out.println(s1);
-		
+		map.put(494308,al);
 		
 			for(int i=1;i<al.size();i++){
 			if(EMPID.equals(al.get(i))){

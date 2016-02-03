@@ -5,25 +5,29 @@
 	<head>
 		<script>
 		function validate(){
-			var Id=document.login.EMPID.value;
-			var name=document.login.NAME.value;
-			if(isNaN(Id)){
-				alert("Enter a valid Idnumber");
+			var Id=document.login.EMPID;
+			var name=document.login.NAME;
+			
+			var role=document.login.ROLE;
+			if(isNaN(Id.value)){
+				window.alert("Enter a valid Idnumber");
 				Id.focus();
 				return false;
 			}
-			if(name==""){
-				alert("Enter the name");
-				name.focus();
-				return false;
-			}
-			
-			 if (what.selectedIndex < 1)
+			   if (name.value == "")
 			    {
-			        alert("Please tell us how we can help you.");
-			        Subject.focus();
+			        window.alert("Please enter your name.");
+			        name.focus();
 			        return false;
 			    }
+			
+		 if (role.selectedIndex < 1)
+			    {
+			        alert("Please Choose the option");
+			      role.focus();
+			        return false;
+			    }
+		
 			 return true;
 		}
 		</script>
@@ -38,13 +42,13 @@
 				</tr>
 				<tr>
 					<td>Name</td>
-					<td><input type="text" value="Name" name="NAME"/></td>
+					<td><input type="text"  name="NAME"/></td>
 				</tr>
 				<tr>
 					<td>Usertype</td>
 					<td>
 				
-						<select type="text" value="" name="Subject">
+						<select type="text" value="" name="ROLE">
 							<option value="-1" selected>[choose yours]</option>
 							<option value="1">Employee</option>
 							<option value="2">Manager</option>
